@@ -1,4 +1,6 @@
-## Preparing the Host System
+# Linux From Scratch
+## Preparing for the Build
+### Preparing the Host System
 ```sh
 apt-get install -y build-essential bison curl gawk texinfo vim
 export LFS_PART=/dev/sdb
@@ -9,6 +11,11 @@ mkdir -pv $LFS
 mount -v -t ext4 $LFS_PART $LFS
 ```
 
+
+
+
+
+# Other
 ```sh
 curl -O https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.16.10.tar.xz
 tar -xvf linux-6.16.10.tar.xz
