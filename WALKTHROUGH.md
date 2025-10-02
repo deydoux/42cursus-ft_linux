@@ -3,7 +3,7 @@
 ### Preparing the Host System
 **Host System Requirements**
 ```sh
-apt-get install -y build-essential bison curl gawk texinfo vim
+apt-get install -y build-essential bison gawk texinfo vim
 ```
 
 **Creating a File System on the Partition**
