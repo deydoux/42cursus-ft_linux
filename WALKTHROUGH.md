@@ -3,7 +3,12 @@
 ### Preparing the Host System
 **Host System Requirements**
 ```sh
-apt-get install -y build-essential bison gawk texinfo vim
+apt-get install -y build-essential bison gawk texinfo
+```
+
+Additional packages for a fresh Debian installation
+```sh
+apt-get install -y vim wget
 ```
 
 **Creating a File System on the Partition**
@@ -13,6 +18,7 @@ mkfs -v -t ext4 $LFS_PART
 ```
 
 **Setting the $LFS Variable and the Umask**
+
 `umask` set default mode/permission for new files and directories:
 - File: 0666 - 0022 = 0644
 - Directory: 0777 - 0022 = 0755
