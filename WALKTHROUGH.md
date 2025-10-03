@@ -3,7 +3,8 @@
 ### Preparing the Host System
 **Host System Requirements**
 ```sh
-apt-get install -y build-essential bison gawk texinfo
+apt-get install -y bison build-essential gawk python3 texinfo
+ln -sfv /usr/bin/bash /usr/bin/sh
 ```
 
 <details>
