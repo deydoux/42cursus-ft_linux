@@ -109,7 +109,7 @@ bash version-check.sh
 </details>
 <br>
 
-Additional packages for a fresh Debian installation
+Additional packages needed for a fresh Debian installation
 ```sh
 apt-get install -y vim wget
 ```
