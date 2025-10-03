@@ -32,16 +32,20 @@ mount -v -t ext4 $LFS_PART $LFS
 ```sh
 mkdir -v $LFS/sources
 chmod -v a+wt $LFS/sources
-
+```
+```sh
 wget https://linuxfromscratch.org/lfs/view/stable/wget-list-sysv
 wget --input-file=wget-list-sysv --continue --directory-prefix=$LFS/sources
-
+```
+```sh
 pushd $LFS/sources
-wget https://linuxfromscratch.org/lfs/view/stable/md5sums
-md5sum -c md5sums
+	wget https://linuxfromscratch.org/lfs/view/stable/md5sums
+	md5sum -c md5sums
 popd
 ```
 
 ### Final Preparations
 #### Creating a Limited Directory Layout in the LFS Filesystem
+```sh
 
+```
