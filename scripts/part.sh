@@ -28,5 +28,5 @@ parted "$DISK" --script \
 	mkpart primary ext4 2250MiB 100%
 
 mkfs -v -t ext4 "${DISK}2"
-mkswap -v "${DISK}3"
+mkswap "${DISK}3"
 mkfs -v -t ext4 "${DISK}4"
