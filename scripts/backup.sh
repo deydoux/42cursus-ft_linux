@@ -6,12 +6,11 @@ if [ "$EUID" -ne 0 ]; then
 	exit 1
 fi
 
-DISK="$1"
-MOUNTPOINT="$2"
-DEST="$3"
+MOUNTPOINT="$1"
+DEST="$2"
 
-if [ -z "$DISK" ] || [ -z "$MOUNTPOINT" ] || [ -z "$DEST" ]; then
-	echo "Usage: $0 /dev/sdX /mnt/point "'$HOME/backup.tar.xz'
+if [ -z "$MOUNTPOINT" ] || [ -z "$DEST" ]; then
+	echo "Usage: $0 /mnt/point "'$HOME/backup.tar.xz'
 	exit 1
 fi
 
