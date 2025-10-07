@@ -21,7 +21,16 @@ mount -vt sysfs sysfs "$MOUNTPOINT/sys"
 mount -vt tmpfs tmpfs "$MOUNTPOINT/run"
 
 if [ -h "$MOUNTPOINT/dev/shm" ]; then
-  install -v -d -m 1777 "$MOUNTPOINT$(realpath /dev/shm)"
+	install -v -d -m 1777 "$MOUNTPOINT$(realpath /dev/shm)"
 else
-  mount -vt tmpfs -o nosuid,nodev tmpfs "$MOUNTPOINT/dev/shm"
+	mount -vt tmpfs -o nosuid,nodev tmpfs "$MOUNTPOINT/dev/shm"
 fi
+
+chroot "$LFS" /usr/bin/env -i   \
+	HOME=/root                  \
+	TERM="$TERM"                \
+	PS1='(lfs chroot) \u:\w\$ ' \
+	PATH=/usr/bin:/usr/sbin     \
+	MAKEFLAGS="-j$(nproc)"      \
+	TESTSUITEFLAGS="-j$(nproc)" \
+	/bin/bash --login
