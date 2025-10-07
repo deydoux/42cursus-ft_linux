@@ -19,6 +19,8 @@ if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
 	exit
 fi
 
+umount "${DISK}"* || true
+
 parted "$DISK" --script \
 	mklabel gpt \
 	mkpart primary 1MiB 2MiB \
