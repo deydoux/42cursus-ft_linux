@@ -14,6 +14,8 @@ if [ -z "$MOUNTPOINT" ] || [ -z "$SRC" ]; then
 	exit 1
 fi
 
+SRC="$(realpath "$SRC")"
+
 cd "$MOUNTPOINT"
 rm -rf ./*
 tar -xpf "$SRC"
