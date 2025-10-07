@@ -15,7 +15,7 @@ if [ -z "$DISK" ] || [ -z "$MOUNTPOINT" ]; then
 fi
 
 mkdir -p "$MOUNTPOINT"
-mount -v -t ext4 "${DISK}4"
+mount -v -t ext4 "${DISK}4" "$MOUNTPOINT"
 mkdir "$MOUNTPOINT/boot"
 mount -v -t ext4 "${DISK}2" "$MOUNTPOINT/boot"
 swapon -v "${DISK}3"
