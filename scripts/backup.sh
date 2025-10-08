@@ -14,12 +14,9 @@ if [ -z "$MOUNTPOINT" ] || [ -z "$DEST" ]; then
 	exit 1
 fi
 
-mountpoint -q "$MOUNTPOINT/dev/shm" && umount "$MOUNTPOINT/dev/shm"
-umount "$MOUNTPOINT/dev/pts"
-umount "$MOUNTPOINT/sys"
-umount "$MOUNTPOINT/proc"
-umount "$MOUNTPOINT/run"
-umount "$MOUNTPOINT/dev"
+DEST="$(realpath "$DEST")"
+
+./umount_virtfs.sh "$MOUNTPOINT"
 
 cd "$MOUNTPOINT"
 tar -cJpf "$DEST" .
