@@ -44,3 +44,5 @@ Pixman-0.46.4
 Cairo-1.18.4
 libssh2-1.11.1
 LLVM-20.1.8
+SQLite-3.50.4
+Rustc-1.89.0
