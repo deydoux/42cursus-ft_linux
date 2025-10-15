@@ -11,3 +11,9 @@ OpenSSH-10.0p1
 p11-kit-0.25.5
 Wget-1.25.0
 Sudo-1.9.17p2
+icu-77.1
+libxml2-2.14.5
+libarchive-3.8.1
+docbook-xml-4.5
+docbook-xsl-nons-1.79.2
+libxslt-1.1.43
